@@ -16,16 +16,16 @@ query (
 }
 `;
 
-export default function DisplayLocations() {
+export default function DisplayPosts() {
   const { loading, error, data } = useQuery(GET_LOCATIONS)
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error : {error.message}</p>
 
   return data?.posts?.data?.map(({ id, title }) => (
-    <div key={id}>
-      <h3>{id}</h3>
-      <b>Title:</b>
-      <p>{title}</p>
+    <div key={id} className='postBox'>
+      <h3 className='id'>{id}</h3>
+      <b className='title'>Title:</b>
+      <p className='fullTitle'>{title}</p>
       <br />
     </div>
   ))

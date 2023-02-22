@@ -1,12 +1,12 @@
 import './App.css'
-import DisplayLocations from './DisplayLocations'
+import DisplayPosts from './DisplayPosts'
 
 function App() {
   return (
-    <div>
-      <h2>My first Apollo app 🚀</h2>
+    <div className='container'>
+      <h1>Posts</h1>
       <br/>
-      <DisplayLocations />
+      <DisplayPosts />
     </div>
   )
 }
